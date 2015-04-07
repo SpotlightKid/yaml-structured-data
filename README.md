@@ -94,7 +94,7 @@ $ pip install PyYAML
 
     print(movies[1].director)
     
-    movies.append(Movie(title="Star Wars", original="Star Wars", year=1977,
+    movies.append(Movie(title="Krieg der Sterne", original="Star Wars", year=1977,
                         director="George Lucas",
                         url="http://www.imdb.com/title/tt0076759/"))
     
@@ -121,7 +121,7 @@ $ pip install PyYAML
     - !!python/object/new:__main__.Movie [1984, 'http://www.imdb.com/title/tt0088247',
       The Terminator, James Cameron, Terminator]
     - !!python/object/new:__main__.Movie [1977, 'http://www.imdb.com/title/tt0076759/',
-      Star Wars, George Lucas, Star Wars]
+      Star Wars, George Lucas, Krieg der Sterne]
     
 
 
@@ -144,7 +144,7 @@ $ pip install PyYAML
       year: 1984}
     - {director: James Cameron, original: The Terminator, title: Terminator, url: 'http://www.imdb.com/title/tt0088247',
       year: 1984}
-    - {director: George Lucas, original: Star Wars, title: Star Wars, url: 'http://www.imdb.com/title/tt0076759/',
+    - {director: George Lucas, original: Star Wars, title: Krieg der Sterne, url: 'http://www.imdb.com/title/tt0076759/',
       year: 1977}
     
 
@@ -173,7 +173,7 @@ $ pip install PyYAML
       year: 1984
     - director: George Lucas
       original: Star Wars
-      title: Star Wars
+      title: Krieg der Sterne
       url: http://www.imdb.com/title/tt0076759/
       year: 1977
     
