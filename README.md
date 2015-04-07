@@ -79,7 +79,7 @@ $ pip install PyYAML
 ## Objekt-Mapping
 
 
-    fields = moviedata[0].keys()
+    fields = tuple(moviedata[0])
     Movie = namedtuple('Movie', fields)
     movies = [Movie(**data) for data in moviedata]
     pprint(movies)
@@ -191,6 +191,22 @@ $ pip install PyYAML
 * Relativ langsam (z.B. nicht als Messaging-Format geeignet)
 * Serialisierung etwas un-intuitiv
 * Namedtuple: keine Default-Werte für fehlende Datenfelder 
+
+## Exkurs: Namedtuples mit Default-Argumenten
+
+
+    from functools import partial
+    
+    fields = dict(director=None, original=None, title=None, url=None, year=None)
+    Movie = partial(namedtuple('Movie', fields), **fields)
+    Movie(title="Angriff der Killerpudel")
+
+
+
+
+    Movie(year=None, url=None, original=None, title='Angriff der Killerpudel', director=None)
+
+
 
 ## Fragen?
 
